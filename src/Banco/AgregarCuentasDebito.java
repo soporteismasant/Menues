@@ -28,6 +28,8 @@ public class AgregarCuentasDebito extends javax.swing.JInternalFrame {
 
         Nombre = new javax.swing.JLabel();
         nombre = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        paterno = new javax.swing.JTextField();
 
         setBorder(javax.swing.BorderFactory.createTitledBorder("Agregar datos de tarjeta de Debito"));
         setClosable(true);
@@ -37,7 +39,7 @@ public class AgregarCuentasDebito extends javax.swing.JInternalFrame {
 
         Nombre.setText("Nombre");
 
-        nombre.setText("jTextField1");
+        jLabel1.setText("Paterno");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -45,9 +47,13 @@ public class AgregarCuentasDebito extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(Nombre)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Nombre)
+                    .addComponent(jLabel1))
                 .addGap(74, 74, 74)
-                .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(nombre)
+                    .addComponent(paterno, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE))
                 .addContainerGap(95, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -57,7 +63,11 @@ public class AgregarCuentasDebito extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nombre)
                     .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(316, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(paterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
 
         pack();
@@ -66,6 +76,8 @@ public class AgregarCuentasDebito extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Nombre;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField nombre;
+    private javax.swing.JTextField paterno;
     // End of variables declaration//GEN-END:variables
 }
